@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Database / Storage
+*.sqlite3
+turbowifi.db
+turbowifi_metrics.db
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# IDEs
+.vscode/
+.idea/
+
+# Testing / coverage
+.pytest_cache/
+coverage.xml
+.coverage
+htmlcov/
+
+# Misc
+.DS_Store
+*.log

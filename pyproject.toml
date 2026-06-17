@@ -1,0 +1,68 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "turbowifi-ai"
+version = "1.0.0"
+description = "TurboWiFi AI: Intelligent Network Optimization Engine"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+    { name = "Fawwaz", email = "fawwaz@example.com" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Networking",
+]
+
+dependencies = [
+    "click>=8.1.7",
+    "rich>=13.7.0",
+    "dnspython>=2.6.0",
+    "textual>=0.52.1",
+    "psutil>=5.9.8",
+    "aiohttp>=3.9.3",
+    "aiofiles>=23.2.1"
+]
+
+[project.optional-dependencies]
+all = [
+    "turbowifi-ai"
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.5",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "ruff>=0.3.0",
+    "black>=24.2.0",
+    "mypy>=1.9.0",
+    "bandit>=1.7.7"
+]
+
+[project.scripts]
+turbowifi = "turbowifi.cli.main:cli"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/turbowifi"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true

@@ -1,0 +1,7 @@
+click>=8.1.7
+rich>=13.7.0
+dnspython>=2.6.0
+textual>=0.52.1
+psutil>=5.9.8
+aiohttp>=3.9.3
+aiofiles>=23.2.1
