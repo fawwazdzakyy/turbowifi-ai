@@ -23,7 +23,11 @@ fi
 
 echo ">> Installing TurboWiFi AI..."
 "$VENV_DIR/bin/pip" install --upgrade pip
-"$VENV_DIR/bin/pip" install .
+if [ -f "pyproject.toml" ] && grep -q "turbowifi-ai" pyproject.toml; then
+    "$VENV_DIR/bin/pip" install .
+else
+    "$VENV_DIR/bin/pip" install git+https://github.com/fawwazdzakyy/turbowifi-ai.git
+fi
 
 echo ">> Configuring wrapper..."
 WRAPPER="$PREFIX/bin/turbowifi"

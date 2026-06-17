@@ -20,8 +20,11 @@ echo ">> Ensuring pipx is in PATH..."
 pipx ensurepath
 
 echo ">> Installing TurboWiFi AI via pipx..."
-# Use pipx install with --force to make it idempotent
-pipx install . --force
+if [ -f "pyproject.toml" ] && grep -q "turbowifi-ai" pyproject.toml; then
+    pipx install . --force
+else
+    pipx install git+https://github.com/fawwazdzakyy/turbowifi-ai.git --force
+fi
 
 echo "======================================"
 echo "Installation complete!"
