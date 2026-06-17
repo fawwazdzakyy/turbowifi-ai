@@ -16,12 +16,12 @@ TurboWiFi AI actively discovers network bottlenecks, predicts congestion, and sa
 
 ### Ubuntu Linux
 ```bash
-curl -fsSL https://raw.githubusercontent.com/fawwaz/turbowifi-ai/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/fawwazdzakyy/turbowifi-ai/main/install.sh | bash
 ```
 
 ### Android Termux
 ```bash
-curl -fsSL https://raw.githubusercontent.com/fawwaz/turbowifi-ai/main/install-termux.sh | bash
+curl -fsSL https://raw.githubusercontent.com/fawwazdzakyy/turbowifi-ai/main/install-termux.sh | bash
 ```
 
 ### Manual Install (pip)
